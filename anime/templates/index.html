@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <ul>
+          <img src="{% static 'image/logo.svg' %}" alt="" class="logo-img" width="300" />
+          <li><a href="/">Главная</a></li>
+          <li><a href="#anime">Аниме</a></li>
+          <li><a href="footer">Контакты</a></li>
+          <li><a href="#news">Популярные тайтлы</a></li>
+        </ul>
+      </div>
+    </header>
+    <section id="news">
+      <div class="content-popular">
+        <div class="car">
+          <img src="{% static 'image/image.png' %}" alt="" class="anime" height="320" />
+          <p class="name">Перевоплотился в...</p>
+        </div>
+        <div class="car">
+          <img src="{% static 'image/image copy.png' %}" alt="" class="anime" height="320" />
+          <p class="name">Перевоплотился в...</p>
+        </div>
+        <div class="car">
+          <img src="{% static 'image/image copy 2.png' %}" alt="" class="anime" height="320" />
+          <p class="name">Перевоплотился в...</p>
+        </div>
+        <div class="car">
+          <img src="{% static 'image/image copy 3.png' %}" alt="" class="anime" height="320" />
+          <p class="name">Перевоплотился в...</p>
+        </div>
+        <div class="car">
+          <img src="{% static 'image/image copy 4.png' %}" alt="" class="anime" height="320" />
+          <p class="name">Перевоплотился в...</p>
+        </div>
+      </div>
+    </section>
+    <main>
+      <h1 class="title-main">Аниме</h1>
+      <div class="wrapper">
+        <div class="cards" id="anime">
+          <div class="card">
+            <img
+              src="{% static 'image/image copy 4.png' %}"
+              alt=""
+              class="anime-card"
+              width="300px"
+            />
+            <h1 class="title-card">О моем перерождении в слизь</h1>
+            <p class="seriya">24 серии</p>
+          </div>
+          {% for i in post %}
+          <div class="card">
+            <img
+              src="{{i.image.url}}"
+              alt=""
+              class="anime-card"
+              width="300px"
+            />
+            <h1 class="title-card">{{ i.name }}</h1>
+            <p class="seriya">{{i.seriya}}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </main>
+   <footer id="footer">
+        <h1>Выполнил М. Бектурсун ПКС4-21</h1>
+    </footer>
+  </body>
+</html>

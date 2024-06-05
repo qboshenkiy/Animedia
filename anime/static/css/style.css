@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+.wrapper{
+    width: 1260px;
+    margin: 0 auto;
+}
+header{
+    padding: 40px;
+    background-color: rgb(241, 241, 241);
+}
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 25px;
+    list-style: none;
+    font-weight: 800;
+}
+a{
+    color: #333333;
+    text-decoration: none;
+}
+a:hover{
+    color: darkred;
+}
+.content-popular{
+    display: flex;
+    background-color: #c50725;
+    width: 1450px;
+    height: 400px;
+    margin: 50px auto;
+    border-radius: 30px;
+    justify-content: space-between;
+
+    padding: 30px;
+}
+.name{
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+}
+.anime{
+    border-radius: 20px;
+}
+.title-main{
+    text-align: center;
+    margin: 150px 0 40px 0;
+    font-size: 64px;
+}
+.anime-card{
+    border-radius: 20px 20px 0 0px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    width: 300px;
+    height: 520px;
+    background-color: #272727;
+    border-radius: 20px;
+    color: white;
+}
+.title-card{
+    font-size: 19px;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 160px;
+}
+footer{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #272727;
+    width: 100%;
+    height: 100px;
+}
